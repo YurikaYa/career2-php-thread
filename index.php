@@ -46,6 +46,7 @@ function writeData() {
     $data = $data."<p>内容:</p>\n";
     $data = $data."<p>".$contents."</p>\n";
 
+    
     $fp = fopen(THREAD_FILE, 'a');
 
     if ($fp){
