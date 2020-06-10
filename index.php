@@ -16,6 +16,8 @@
 <h2>スレッド</h2>
 
 <?php
+//場所
+date_default_timezone_set("Asiya/Tokyou");
 
 const THREAD_FILE = 'thread.txt';
 
@@ -29,6 +31,8 @@ function readData() {
 
     $thread_text = file_get_contents(THREAD_FILE);
     echo $thread_text;
+
+
 }
 
 function writeData() {
@@ -37,6 +41,7 @@ function writeData() {
     $contents = nl2br($contents);
 
     $data = "<hr>\n";
+    $data = $data."<p>投稿時間:".date("Y-m-d-w a-H:i:s")."</p>\n";
     $data = $data."<p>投稿者:".$personal_name."</p>\n";
     $data = $data."<p>内容:</p>\n";
     $data = $data."<p>".$contents."</p>\n";
