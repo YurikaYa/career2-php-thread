@@ -1,6 +1,9 @@
 <html>
 
-<head><title>掲示板App</title></head>
+<head>
+<link rel="stylesheet" type ="text/css" href="index.css">
+<title>掲示板App</title>
+</head>
 
 <body>
 
