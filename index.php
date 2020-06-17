@@ -34,7 +34,7 @@
 
 <form method="POST" action="<?php print($_SERVER['PHP_SELF']) ?>">
 
-    <input type="hidden" name="method" value="DELETE">
+    <inpud type="hidden" name="method" value="DELETE">
 
     <button type="submit">投稿を全削除する</button>
 
@@ -154,7 +154,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
     }
 
-    //kfj
+    
 
     // ブラウザのリロード対策
 
