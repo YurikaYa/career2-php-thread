@@ -15,9 +15,23 @@
 
 <h2>スレッド</h2>
 
+
+
+<form method="POST" action="<?php print($_SERVER['PHP_SELF']) ?>">
+
+    <inpud type="hidden" name="method" value="DELETE">
+
+    <button type="submit">投稿を全削除する</button>
+
+</form>
+
+
+
 <?php
-//場所
-date_default_timezone_set("Asiya/Tokyou");
+
+
+
+date_default_timezone_set('Asia/Tokyo');
 
 const THREAD_FILE = 'thread.txt';
 
@@ -30,7 +44,7 @@ function readData() {
     }
 
     $thread_text = file_get_contents(THREAD_FILE);
-    echo $thread_text;
+    echo $thread_text;#5446
 
 
 }
@@ -68,8 +82,17 @@ function writeData() {
     header("Location: $redirect_url");
     exit;
 }
+function deleteData(){
+    file_put_contents(ThREAD_FILE,"");
+}
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
+    if()isset($_POST["method"]) && $_POST["method"] === "DELETE"{
+
+    }else{
+
+
+    }
     writeData();
 }
 
